@@ -5,8 +5,12 @@
   },
   "workspaceMount": "source=${localWorkspaceFolder},target=/zephyrproject/zephyr-workshop,type=bind",
   "workspaceFolder": "/zephyrproject",
-  "postCreateCommand": "bash /zephyrproject/zephyr-workshop/.devcontainer/post-create.sh",
+  "onCreateCommand": "bash /zephyrproject/zephyr-workshop/.devcontainer/post-create.sh",
   "postAttachCommand": "code /zephyrproject/zephyr-workshop/samples/01_hello_world/src/main.c",
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "8gb"
+  },
   "remoteEnv": {
     "LC_ALL": "C"
   },
