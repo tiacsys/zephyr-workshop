@@ -62,7 +62,7 @@ int main(void)
 	k_work_queue_start(&my_work_q, my_stack_area,
 			   K_THREAD_STACK_SIZEOF(my_stack_area), MY_PRIORITY,
 			   NULL);
-	k_thread_name_set(&(my_work_q.thread), "my_work_q_thread");
+	k_thread_name_set(k_work_queue_thread_get(&my_work_q), "my_work_q_thread");
 
 	/* Submitting a work item to a custom workqueue */
 	k_work_submit_to_queue(&my_work_q, &my_work);
