@@ -36,13 +36,17 @@
         "C_Cpp.intelliSenseCachePath": "",
         "cmake.configureOnOpen": false,
         "cmake.showOptionsMovedNotification": false,
-        "git.autofetch": false
+        "git.autofetch": false,
+        "clangd.arguments": [
+					"--header-insertion=never"
+				]
       },
       "extensions": [
         "ms-vscode.cpptools-extension-pack",
         "trond-snekvik.kconfig-lang",
         "nordic-semiconductor.nrf-devicetree",
-        "editorconfig.editorconfig"
+        "editorconfig.editorconfig",
+        "llvm-vs-code-extensions.vscode-clangd"
       ]
     }
   }
