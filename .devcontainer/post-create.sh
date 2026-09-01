@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-cd /zephyrproject
+cd /workspaces
 
 if [ ! -f .west/config ]; then
     west init -l zephyr-workshop

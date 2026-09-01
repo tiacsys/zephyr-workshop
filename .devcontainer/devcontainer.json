@@ -3,9 +3,9 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "workspaceMount": "source=${localWorkspaceFolder},target=/zephyrproject/zephyr-workshop,type=bind",
-  "workspaceFolder": "/zephyrproject",
-  "onCreateCommand": "bash /zephyrproject/zephyr-workshop/.devcontainer/post-create.sh",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/zephyr-workshop,type=bind",
+  "workspaceFolder": "/workspaces",
+  "onCreateCommand": "bash /workspaces/zephyr-workshop/.devcontainer/post-create.sh",
   "hostRequirements": {
     "cpus": 4,
     "memory": "8gb"

@@ -1,8 +1,8 @@
 FROM mcr.microsoft.com/devcontainers/base:debian-13
 
 # Create zephyrproject directory
-RUN mkdir -p /zephyrproject \
-    && chown -R vscode:vscode /zephyrproject
+RUN mkdir -p /workspaces \
+    && chown -R vscode:vscode /workspaces
 
 # Install west and basic build dependencies
 RUN apt-get update \
@@ -36,3 +36,6 @@ RUN apt-get update \
 
 # Install west
 RUN pip3 install --break-system-packages west
+
+USER vscode
+WORKDIR /workspaces
